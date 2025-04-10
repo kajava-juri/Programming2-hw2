@@ -1,0 +1,11 @@
+product_code,name,RAM_MB,screen_size_inches,operating_system
+SP001,Samsung Galaxy S21,8192,6.2,Android
+SP002,Apple iPhone 13,4096,6.1,iOS
+SP003,Google Pixel 6,8192,6.4,Android
+SP004,Xiaomi Redmi Note 10,4096,6.43,Android
+SP005,OnePlus 9 Pro,8192,6.7,Android
+SP006,Samsung Galaxy A52,6144,6.5,Android
+SP007,Apple iPhone SE (2020),3072,4.7,iOS
+SP008,Motorola Moto G Power (2021),4096,6.6,Android
+SP009,LG Velvet,6144,6.8,Android
+SP010,Nokia 8.3 5G,8192,6.81,Android

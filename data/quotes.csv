@@ -1,0 +1,21 @@
+quote_id,product_code,retailer,price,availability
+Q001,SP001,Amazon,799.00,In Stock
+Q002,SP001,Best Buy,849.99,In Stock
+Q003,SP002,Amazon,899.00,In Stock
+Q004,SP002,Apple Store,999.00,In Stock
+Q005,SP003,Google Store,699.00,Out of Stock
+Q006,SP003,Best Buy,749.00,In Stock
+Q007,SP004,Amazon,249.00,In Stock
+Q008,SP004,Xiaomi Store,229.00,In Stock
+Q009,SP005,OnePlus Store,899.00,In Stock
+Q010,SP005,Amazon,949.00,Out of Stock
+Q011,SP006,Samsung Store,399.00,In Stock
+Q012,SP006,Best Buy,449.00,In Stock
+Q013,SP007,Apple Store,399.00,In Stock
+Q014,SP007,Amazon,349.00,In Stock
+Q015,SP008,Amazon,179.00,In Stock
+Q016,SP008,Best Buy,199.00,Out of Stock
+Q017,SP009,Amazon,299.00,In Stock
+Q018,SP009,LG Store,349.00,In Stock
+Q019,SP010,Nokia Store,499.00,In Stock
+Q020,SP010,Amazon,549.00,Out of Stock
