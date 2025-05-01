@@ -1,0 +1,6 @@
+[2025-05-01 15:06:36] INFO: Starting the program
+[2025-05-01 15:06:36] INFO: Reading products from file
+[2025-05-01 15:06:36] ERROR: Failed to open products file
+[2025-05-01 15:06:56] INFO: Starting the program
+[2025-05-01 15:06:56] INFO: Reading products from file
+[2025-05-01 15:06:56] ERROR: Failed to open products file

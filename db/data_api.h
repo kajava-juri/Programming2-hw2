@@ -5,17 +5,25 @@
 #include <inttypes.h>
 #include "models.h"
 
+#define BUF_LEN 128
 #define MAX_PRODUCTS 100
 #define MAX_QUOTES 100
+
+typedef enum {
+    TYPE_PRODUCT,
+    TYPE_QUOTE,
+} DataType;
 
 typedef struct {
     void *data;
     void (*freeData)(void *); // a function provided that frees the data
+    void *(*getElementAt)(void *, size_t); // a function provided that gets the element at index
     size_t size;
     size_t used;
     size_t limit;
 } GenericWrapper;
 
 void FreeWrapper(GenericWrapper *wrapper);
+void *GetElementAt(GenericWrapper *wrapper, size_t index);
 
 #endif // DATA_API_H

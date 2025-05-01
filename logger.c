@@ -37,10 +37,7 @@ void LogMessage(LogLevel level, const char *message)
     if (!loggingEnabled) {
         return;
     }
-    if (level < LOG_DEBUG || level > LOG_ERROR) {
-        fprintf(stderr, "Invalid log level: %d\n", level);
-        return;
-    }
+
     logFile = fopen(LOG_FILE, "a");
     if(logFile == NULL) {
         perror("Failed to open log file");
@@ -49,7 +46,7 @@ void LogMessage(LogLevel level, const char *message)
 
     time_t currentTime;
     time(&currentTime);
-    char *timeBuf[64];
+    char timeBuf[64];
     strftime(timeBuf, sizeof(timeBuf), "%Y-%m-%d %H:%M:%S", localtime(&currentTime));
 
     fprintf(logFile, "[%s] %s: %s\n", timeBuf, logLevelStrings[level], message);

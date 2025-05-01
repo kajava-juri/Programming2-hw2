@@ -5,10 +5,10 @@
 # $< : first dependency
 # $* : target without extension
 
-SRC = main.c logger.c
+SRC = main.c logger.c utils.c db/data_api.c db/api/products.c
 OBJ = $(SRC:.c=.o)
 CC = gcc
-CFLAGS = -Wall -Wextra -pedantic -fanalyzer
+CFLAGS = -Wall -Wextra -pedantic -fanalyzer -g -fsanitize=address
 
 TARGET = pwatch
 
@@ -21,5 +21,9 @@ $(TARGET): $(OBJ)
 	$(CC) -o $@ $^ $(CFLAGS)
 
 # to make all of object files, compile each .c one by one
-$(OBJ): $(SRC)
-	$(CC) -c $< $(CFLAGS)
+%.o: %.c
+	$(CC) -c $< $(CFLAGS) -o$@
+
+.PHONY: clean
+clean:
+	rm -f $(TARGET) $(OBJ)
