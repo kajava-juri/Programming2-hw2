@@ -5,7 +5,6 @@
 
 #include "products.h"
 #include "../../utils.h"
-#include "../data_api.h"
 #include "../../logger.h"
 
 // with the help of stack overflow
@@ -16,7 +15,7 @@
 void FreeProduct(void *pProduct)
 {
     Product *product = (Product *)pProduct;
-    if (product == NULL) 
+    if (product == NULL)
     {
         return;
     }
@@ -26,7 +25,7 @@ void FreeProduct(void *pProduct)
 
 void *GetProductAt(GenericWrapper *pw, size_t index)
 {
-    if (pw == NULL || pw->data == NULL || index >= pw->used) 
+    if (pw == NULL || pw->data == NULL || index >= pw->used)
     {
         return NULL;
     }
@@ -46,7 +45,7 @@ void ReadProducts(GenericWrapper *pw, char *filename)
 {
     LogInfo("Reading products from file");
     FILE *fp = fopen(filename, "r");
-    if (fp == NULL) 
+    if (fp == NULL)
     {
         LogError("Failed to open products file");
         perror("Failed to open products file");
@@ -63,24 +62,29 @@ void ReadProducts(GenericWrapper *pw, char *filename)
     Product *tempProduct = NULL;
 
     // buffers for reading
-    char bufCode[CODE_LEN + 1], bufName[BUF_LEN + 1], bufOS[BUF_LEN + 1];
+    char bufCode[PRODUCT_CODE_LEN + 1], bufName[BUF_LEN + 1], bufOS[BUF_LEN + 1];
     int bufRam;
     float bufScreen;
 
+    // skip csv header
+    fscanf(fp, "%*[^\n]\n"); // Reads and discards everything until the first newline
+
     // Limit the maximum characters read by having the MACRO value after '%' to avoid buffer overflow
-    while(count < MAX_PRODUCTS && fscanf(fp, " %"
-        STR(CODE_LEN) "[^,] ,%"
-        STR(BUF_LEN) "[^,],%d,%f,%"
-        STR(BUF_LEN) "[^\n]\n", bufCode, bufName, &bufRam, &bufScreen, bufOS) == 5) 
+    while (count < MAX_PRODUCTS && fscanf(fp, " %" STR(PRODUCT_CODE_LEN) "[^,] ,"                                            // product code
+                                                                         " %" STR(BUF_LEN) "[^,] ,"                      // product name
+                                                                                           "%d,%f,"                      // RAM size, screen size
+                                                                                           " %" STR(BUF_LEN) "[^\n] \n", // operating system
+                                          bufCode, bufName, &bufRam, &bufScreen, bufOS) == 5)
     {
         printf("Product %zu: %s, %s, %d MB, %.2f inches, %s\n", count + 1, bufCode, bufName, bufRam, bufScreen, bufOS);
-        if(count >= allocated)
+        if (count >= allocated)
         {
             allocated += 10; // enough for this task
             tempProduct = realloc(pProducts, allocated * sizeof(Product));
-            if (tempProduct == NULL) 
+            if (tempProduct == NULL)
             {
-                for (size_t i = 0; i < count; i++) {
+                for (size_t i = 0; i < count; i++)
+                {
                     FreeProduct(&pProducts[i]);
                 }
                 FreeMemory((void **)&pProducts);
@@ -100,7 +104,7 @@ void ReadProducts(GenericWrapper *pw, char *filename)
         (pProducts + count)->name = strdup(bufName);
 
         strcpy((pProducts + count)->product_code, bufCode);
-        
+
         count++;
     }
 
@@ -114,7 +118,7 @@ void ReadProducts(GenericWrapper *pw, char *filename)
 
 void DisplayProduct(Product *product)
 {
-    if (product == NULL) 
+    if (product == NULL)
     {
         return;
     }
@@ -126,14 +130,14 @@ void DisplayProduct(Product *product)
 }
 void DisplayProducts(GenericWrapper *pw)
 {
-    if (pw == NULL || pw->data == NULL) 
+    if (pw == NULL || pw->data == NULL)
     {
         return;
     }
     printf("%d products found:\n", (int)pw->used);
     // not safe? maybe add a 'type' property to the wrapper
     Product *products = (Product *)pw->data;
-    for (size_t i = 0; i < pw->used; i++) 
+    for (size_t i = 0; i < pw->used; i++)
     {
         DisplayProduct(&products[i]);
         printf("\n");

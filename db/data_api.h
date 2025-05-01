@@ -3,7 +3,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <inttypes.h>
-#include "models.h"
 
 #define BUF_LEN 128
 #define MAX_PRODUCTS 100

@@ -1,146 +1,86 @@
-[2025-04-11 01:02:29] INFO: Starting the program
-[2025-04-11 01:02:29] INFO: Reading products from file
-[2025-04-11 01:02:29] INFO: Products read successfully
-[2025-04-11 01:02:29] INFO: Displaying products
-[2025-04-11 01:02:29] INFO: Products displayed successfully
-[2025-04-11 01:05:23] INFO: Starting the program
-[2025-04-11 01:05:23] INFO: Reading products from file
-[2025-04-11 01:05:23] INFO: Products read successfully
-[2025-04-11 01:05:23] INFO: Displaying products
-[2025-04-11 01:05:23] INFO: Products displayed successfully
-[2025-04-11 01:09:40] INFO: Starting the program
-[2025-04-11 01:09:40] INFO: Reading products from file
-[2025-04-11 01:09:40] INFO: Products read successfully
-[2025-04-11 01:09:40] INFO: Displaying products
-[2025-04-11 01:09:40] INFO: Products displayed successfully
-[2025-05-01 15:02:35] INFO: Starting the program
-[2025-05-01 15:02:35] INFO: Reading products from file
-[2025-05-01 15:02:35] INFO: Products read successfully
-[2025-05-01 15:02:35] INFO: Displaying products
-[2025-05-01 15:02:35] INFO: Products displayed successfully
-[2025-05-01 15:03:12] INFO: Starting the program
-[2025-05-01 15:03:12] INFO: Reading products from file
-[2025-05-01 15:03:12] INFO: Products read successfully
-[2025-05-01 15:03:12] INFO: Displaying products
-[2025-05-01 15:03:12] INFO: Products displayed successfully
-[2025-05-01 15:03:23] INFO: Starting the program
-[2025-05-01 15:03:23] INFO: Reading products from file
-[2025-05-01 15:03:23] INFO: Products read successfully
-[2025-05-01 15:03:23] INFO: Displaying products
-[2025-05-01 15:03:23] INFO: Products displayed successfully
-[2025-05-01 15:03:23] INFO: Memory freed successfully
-[2025-05-01 15:03:23] INFO: Ending the program
-[2025-05-01 15:05:54] INFO: Starting the program
-[2025-05-01 15:05:54] INFO: Reading products from file
-[2025-05-01 15:05:54] INFO: Products read successfully
-[2025-05-01 15:05:54] INFO: Displaying products
-[2025-05-01 15:05:54] INFO: Products displayed successfully
-[2025-05-01 15:06:10] INFO: Starting the program
-[2025-05-01 15:06:10] INFO: Reading products from file
-[2025-05-01 15:06:10] INFO: Products read successfully
-[2025-05-01 15:06:10] INFO: Displaying products
-[2025-05-01 15:06:10] INFO: Products displayed successfully
-[2025-05-01 15:15:38] INFO: Starting the program
-[2025-05-01 15:15:38] INFO: Reading products from file
-[2025-05-01 15:15:38] INFO: Products read successfully
-[2025-05-01 15:15:38] INFO: Displaying products
-[2025-05-01 15:15:38] INFO: Products displayed successfully
-[2025-05-01 15:16:55] INFO: Starting the program
-[2025-05-01 15:16:55] INFO: Reading products from file
-[2025-05-01 15:16:55] INFO: Products read successfully
-[2025-05-01 15:16:55] INFO: Displaying products
-[2025-05-01 15:16:55] INFO: Products displayed successfully
-[2025-05-01 15:17:12] INFO: Starting the program
-[2025-05-01 15:17:12] INFO: Reading products from file
-[2025-05-01 15:17:12] INFO: Products read successfully
-[2025-05-01 15:17:12] INFO: Displaying products
-[2025-05-01 15:17:12] INFO: Products displayed successfully
-[2025-05-01 15:19:26] INFO: Starting the program
-[2025-05-01 15:19:26] INFO: Reading products from file
-[2025-05-01 15:19:26] INFO: Products read successfully
-[2025-05-01 15:19:26] INFO: Displaying products
-[2025-05-01 15:19:26] INFO: Products displayed successfully
-[2025-05-01 15:21:25] INFO: Starting the program
-[2025-05-01 15:21:29] INFO: Reading products from file
-[2025-05-01 15:22:26] INFO: Starting the program
-[2025-05-01 15:22:29] INFO: Reading products from file
-[2025-05-01 15:23:14] INFO: Starting the program
-[2025-05-01 15:23:30] INFO: Reading products from file
-[2025-05-01 15:25:14] INFO: Starting the program
-[2025-05-01 15:25:16] INFO: Reading products from file
-[2025-05-01 15:26:11] INFO: Products read successfully
-[2025-05-01 15:26:11] INFO: Displaying products
-[2025-05-01 15:26:11] INFO: Products displayed successfully
-[2025-05-01 15:27:29] INFO: Starting the program
-[2025-05-01 15:27:34] INFO: Reading products from file
-[2025-05-01 15:27:35] INFO: Products read successfully
-[2025-05-01 15:27:35] INFO: Displaying products
-[2025-05-01 15:27:35] INFO: Products displayed successfully
-[2025-05-01 15:29:07] INFO: Starting the program
-[2025-05-01 15:29:08] INFO: Reading products from file
-[2025-05-01 15:29:11] INFO: Products read successfully
-[2025-05-01 15:29:11] INFO: Displaying products
-[2025-05-01 15:29:11] INFO: Products displayed successfully
-[2025-05-01 15:30:51] INFO: Starting the program
-[2025-05-01 15:30:53] INFO: Reading products from file
-[2025-05-01 15:30:54] INFO: Products read successfully
-[2025-05-01 15:30:54] INFO: Displaying products
-[2025-05-01 15:30:54] INFO: Products displayed successfully
-[2025-05-01 15:32:10] INFO: Starting the program
-[2025-05-01 15:32:12] INFO: Reading products from file
-[2025-05-01 15:32:13] INFO: Products read successfully
-[2025-05-01 15:32:13] INFO: Displaying products
-[2025-05-01 15:32:13] INFO: Products displayed successfully
-[2025-05-01 15:33:08] INFO: Starting the program
-[2025-05-01 15:33:09] INFO: Reading products from file
-[2025-05-01 15:34:41] INFO: Starting the program
-[2025-05-01 15:34:42] INFO: Reading products from file
-[2025-05-01 15:34:46] INFO: Products read successfully
-[2025-05-01 15:34:46] INFO: Displaying products
-[2025-05-01 15:34:46] INFO: Products displayed successfully
-[2025-05-01 15:35:52] INFO: Starting the program
-[2025-05-01 15:35:54] INFO: Reading products from file
-[2025-05-01 15:35:55] INFO: Products read successfully
-[2025-05-01 15:35:55] INFO: Displaying products
-[2025-05-01 15:35:55] INFO: Products displayed successfully
-[2025-05-01 15:36:42] INFO: Starting the program
-[2025-05-01 15:36:45] INFO: Reading products from file
-[2025-05-01 15:36:47] INFO: Products read successfully
-[2025-05-01 15:36:47] INFO: Displaying products
-[2025-05-01 15:36:47] INFO: Products displayed successfully
-[2025-05-01 15:37:34] INFO: Starting the program
-[2025-05-01 15:37:36] INFO: Reading products from file
-[2025-05-01 15:37:37] INFO: Products read successfully
-[2025-05-01 15:37:37] INFO: Displaying products
-[2025-05-01 15:37:37] INFO: Products displayed successfully
-[2025-05-01 15:40:00] INFO: Starting the program
-[2025-05-01 15:40:01] INFO: Reading products from file
-[2025-05-01 15:40:02] INFO: Products read successfully
-[2025-05-01 15:40:02] INFO: Displaying products
-[2025-05-01 15:40:02] INFO: Products displayed successfully
-[2025-05-01 15:40:54] INFO: Starting the program
-[2025-05-01 15:42:45] INFO: Reading products from file
-[2025-05-01 15:42:57] INFO: Products read successfully
-[2025-05-01 15:42:57] INFO: Displaying products
-[2025-05-01 15:42:57] INFO: Products displayed successfully
-[2025-05-01 15:48:17] INFO: Starting the program
-[2025-05-01 15:48:20] INFO: Reading products from file
-[2025-05-01 15:48:22] INFO: Products read successfully
-[2025-05-01 15:48:22] INFO: Displaying products
-[2025-05-01 15:48:22] INFO: Products displayed successfully
-[2025-05-01 15:48:54] INFO: Memory freed successfully
-[2025-05-01 15:48:54] INFO: Ending the program
-[2025-05-01 15:49:17] INFO: Starting the program
-[2025-05-01 15:49:19] INFO: Reading products from file
-[2025-05-01 15:49:21] INFO: Products read successfully
-[2025-05-01 15:49:21] INFO: Displaying products
-[2025-05-01 15:49:21] INFO: Products displayed successfully
-[2025-05-01 15:49:30] INFO: Memory freed successfully
-[2025-05-01 15:49:30] INFO: Ending the program
-[2025-05-01 15:49:48] INFO: Starting the program
-[2025-05-01 15:49:48] INFO: Reading products from file
-[2025-05-01 15:49:48] INFO: Products read successfully
-[2025-05-01 15:49:48] INFO: Displaying products
-[2025-05-01 15:49:48] INFO: Products displayed successfully
-[2025-05-01 15:49:48] INFO: Memory freed successfully
-[2025-05-01 15:49:48] INFO: Ending the program
+[2025-05-01 17:34:57] INFO: Starting the program
+[2025-05-01 17:34:57] INFO: Reading products from file
+[2025-05-01 17:34:57] INFO: Products read successfully
+[2025-05-01 17:34:57] INFO: Displaying products
+[2025-05-01 17:34:57] INFO: Products displayed successfully
+[2025-05-01 17:34:57] INFO: Reading quotes from file
+[2025-05-01 17:34:57] INFO: Quotes read successfully
+[2025-05-01 17:34:57] INFO: Displaying quotes
+[2025-05-01 17:34:57] INFO: Freeing memory
+[2025-05-01 17:34:57] INFO: Memory freed successfully
+[2025-05-01 17:34:57] INFO: Ending the program
+[2025-05-01 17:35:31] INFO: Starting the program
+[2025-05-01 17:35:31] INFO: Reading products from file
+[2025-05-01 17:35:31] INFO: Products read successfully
+[2025-05-01 17:35:31] INFO: Displaying products
+[2025-05-01 17:35:31] INFO: Products displayed successfully
+[2025-05-01 17:35:31] INFO: Reading quotes from file
+[2025-05-01 17:35:31] INFO: Quotes read successfully
+[2025-05-01 17:35:31] INFO: Displaying quotes
+[2025-05-01 17:35:31] INFO: Freeing memory
+[2025-05-01 17:35:31] INFO: Memory freed successfully
+[2025-05-01 17:35:31] INFO: Ending the program
+[2025-05-01 17:35:49] INFO: Starting the program
+[2025-05-01 17:35:49] INFO: Reading products from file
+[2025-05-01 17:35:49] INFO: Products read successfully
+[2025-05-01 17:35:49] INFO: Displaying products
+[2025-05-01 17:35:49] INFO: Products displayed successfully
+[2025-05-01 17:35:49] INFO: Reading quotes from file
+[2025-05-01 17:35:49] INFO: Quotes read successfully
+[2025-05-01 17:35:49] INFO: Displaying quotes
+[2025-05-01 17:35:49] INFO: Freeing memory
+[2025-05-01 17:35:49] INFO: Memory freed successfully
+[2025-05-01 17:35:49] INFO: Ending the program
+[2025-05-01 17:37:05] INFO: Starting the program
+[2025-05-01 17:37:12] INFO: Reading products from file
+[2025-05-01 17:37:18] INFO: Products read successfully
+[2025-05-01 17:37:18] INFO: Displaying products
+[2025-05-01 17:37:18] INFO: Products displayed successfully
+[2025-05-01 17:37:21] INFO: Reading quotes from file
+[2025-05-01 17:37:21] INFO: Quotes read successfully
+[2025-05-01 17:37:21] INFO: Displaying quotes
+[2025-05-01 17:37:21] INFO: Freeing memory
+[2025-05-01 17:37:34] INFO: Starting the program
+[2025-05-01 17:37:34] INFO: Reading products from file
+[2025-05-01 17:37:34] INFO: Products read successfully
+[2025-05-01 17:37:34] INFO: Displaying products
+[2025-05-01 17:37:34] INFO: Products displayed successfully
+[2025-05-01 17:37:34] INFO: Reading quotes from file
+[2025-05-01 17:37:34] INFO: Quotes read successfully
+[2025-05-01 17:37:34] INFO: Displaying quotes
+[2025-05-01 17:37:34] INFO: Freeing memory
+[2025-05-01 17:37:34] INFO: Memory freed successfully
+[2025-05-01 17:37:34] INFO: Ending the program
+[2025-05-01 17:38:58] INFO: Starting the program
+[2025-05-01 17:39:00] INFO: Reading products from file
+[2025-05-01 17:39:00] INFO: Products read successfully
+[2025-05-01 17:39:00] INFO: Displaying products
+[2025-05-01 17:39:00] INFO: Products displayed successfully
+[2025-05-01 17:39:01] INFO: Reading quotes from file
+[2025-05-01 17:39:01] INFO: Quotes read successfully
+[2025-05-01 17:39:01] INFO: Displaying quotes
+[2025-05-01 17:39:01] INFO: Freeing memory
+[2025-05-01 17:39:28] INFO: Starting the program
+[2025-05-01 17:39:28] INFO: Reading products from file
+[2025-05-01 17:39:28] INFO: Products read successfully
+[2025-05-01 17:39:28] INFO: Displaying products
+[2025-05-01 17:39:28] INFO: Products displayed successfully
+[2025-05-01 17:39:28] INFO: Reading quotes from file
+[2025-05-01 17:39:57] INFO: Starting the program
+[2025-05-01 17:39:57] INFO: Reading products from file
+[2025-05-01 17:39:57] INFO: Products read successfully
+[2025-05-01 17:39:57] INFO: Displaying products
+[2025-05-01 17:39:57] INFO: Products displayed successfully
+[2025-05-01 17:39:57] INFO: Reading quotes from file
+[2025-05-01 17:39:57] ERROR: Invalid availability status: Out of Sto
+[2025-05-01 17:40:47] INFO: Starting the program
+[2025-05-01 17:40:47] INFO: Reading products from file
+[2025-05-01 17:40:47] INFO: Products read successfully
+[2025-05-01 17:40:47] INFO: Displaying products
+[2025-05-01 17:40:47] INFO: Products displayed successfully
+[2025-05-01 17:40:47] INFO: Reading quotes from file
+[2025-05-01 17:40:47] INFO: Quotes read successfully
+[2025-05-01 17:40:47] INFO: Displaying quotes
+[2025-05-01 17:40:47] INFO: Freeing memory
+[2025-05-01 17:40:47] INFO: Memory freed successfully
+[2025-05-01 17:40:47] INFO: Ending the program

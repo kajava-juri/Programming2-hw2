@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "db/data_api.h"
-#include "db/models.h"
 #include "db/api/products.h"
+#include "db/api/quotes.h"
 #include "utils.h"
 #include "logger.h"
 
@@ -25,6 +25,20 @@ int main(void)
     DisplayProducts(&pw);
     LogInfo("Products displayed successfully");
 
+    GenericWrapper qw;
+    Quote *quotes = NULL;
+    qw.data = quotes;
+    qw.freeData = (void (*)(void *))FreeQuote;
+    // void function pointer that takes a void pointer as parameter and returns a pointer to product data at index... looks weird
+    qw.getElementAt = (void * (*)(void *, size_t))GetQuoteAt;
+    ReadQuotes(&qw, "data/quotes.csv");
+    LogInfo("Quotes read successfully");
+
+    LogInfo("Displaying quotes");
+    DisplayQuotes(&qw);
+
+    LogInfo("Freeing memory");
+    FreeWrapper(&qw);
     FreeWrapper(&pw);
     LogInfo("Memory freed successfully");
     LogInfo("Ending the program");
