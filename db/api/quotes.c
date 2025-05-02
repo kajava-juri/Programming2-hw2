@@ -17,6 +17,40 @@ const char* availability_strings[] = {
     [OUT_OF_STOCK] = "In Stock"
 };
 
+/**
+ * @brief Initializes a GenericWrapper for Quote data
+ *
+ * @param qw Pointer to the GenericWrapper to be initialized
+ */
+void InitQuoteWrapper(GenericWrapper *qw)
+{
+    if (qw == NULL) 
+    {
+        return;
+    }
+    qw->data = NULL;
+    qw->size = sizeof(Quote);
+    qw->used = 0;
+    qw->limit = 0;
+    qw->freeData = FreeQuote;
+    qw->getElementAt = GetQuoteAt;
+}
+
+/**
+ * @brief Get the string representation of the availability status
+ *
+ * @param status The availability status
+ * @return Pointer to the string representation of the status
+ */
+char *GetAvailabilityString(AvailabilityStatus status)
+{
+    if (status < 0 || status >= sizeof(availability_strings) / sizeof(availability_strings[0])) 
+    {
+        return NULL;
+    }
+    return availability_strings[status];
+}
+
 void FreeQuote(void *pQuote)
 {
     Quote *quote = (Quote *)pQuote;

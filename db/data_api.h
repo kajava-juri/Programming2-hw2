@@ -15,14 +15,16 @@ typedef enum {
 
 typedef struct {
     void *data;
+
+    // These function must be implemented in the respective data types
     void (*freeData)(void *); // a function provided that frees the data
     void *(*getElementAt)(void *, size_t); // a function provided that gets the element at index
+
     size_t size;
     size_t used;
     size_t limit;
 } GenericWrapper;
 
 void FreeWrapper(GenericWrapper *wrapper);
-void *GetElementAt(GenericWrapper *wrapper, size_t index);
 
 #endif // DATA_API_H

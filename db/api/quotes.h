@@ -27,5 +27,7 @@ void ReadQuotes(GenericWrapper *pw, char *filename);
 void DisplayQuote(Quote *quote);
 void DisplayQuotes(GenericWrapper *pw);
 void *GetQuoteAt(GenericWrapper *pw, size_t index);
+char *GetAvailabilityString(AvailabilityStatus status);
+void InitQuoteWrapper(GenericWrapper *qw);
 
 #endif // QUOTES_H
