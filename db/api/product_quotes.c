@@ -38,13 +38,22 @@ GenericWrapper *GroupByProduct(GenericWrapper *products, GenericWrapper *quotes)
         Product *product = (Product *)products->getElementAt(products, i);
         if (product == NULL)
         {
+            // Initialize with NULL values for empty products
+            productQuotes[i].product = NULL;
+            productQuotes[i].quotes = NULL;
+            productQuotes[i].quote_count = 0;
             continue;
         }
 
         // search for quotes associated with the product id
         char *productCode = product->product_code;
-        GenericWrapper *associatedQuotes = malloc(sizeof(GenericWrapper));
-        InitQuoteWrapper(associatedQuotes);
+        Quote **quotePtrs = malloc(sizeof(Quote **));
+        if (quotePtrs == NULL)
+        {
+            FreeMemory((void **)&productQuotes);
+            LogError("Failed to allocate memory for associated quotes wrapper");
+            exit(EXIT_FAILURE);
+        }
 
         int count = 0;
         int allocated = 0;
@@ -61,42 +70,32 @@ GenericWrapper *GroupByProduct(GenericWrapper *products, GenericWrapper *quotes)
             if (count >= allocated)
             {
                 allocated += 10; // enough for this task
-                Quote *qTemp = realloc(associatedQuotes->data, (unsigned)allocated * sizeof(Quote));
+                Quote **qTemp = realloc(quotePtrs, (unsigned)allocated * sizeof(Quote *));
                 if (qTemp == NULL)
                 {
-                    FreeWrapper(associatedQuotes);
-                    FreeMemory((void **)&associatedQuotes);
+                    // Clean up memory
                     FreeWrapper(productQuoteWrapper);
-                    FreeMemory((void **)&productQuoteWrapper);
-
-                    FreeMemory((void **)&productQuotes);
-
-                    LogError("Failed to allocate memory for quotes");
+                    FreeMemory((void **)&quotePtrs);
+                    // Rest of cleanup code
+                    LogError("Failed to reallocate memory for quotes");
                     exit(EXIT_FAILURE);
                 }
 
                 // reassign the data pointer to new bigger memory
-                associatedQuotes->data = qTemp;
+                quotePtrs = qTemp;
             }
 
-            // copy the quote to the associated quotes array
-            Quote *dest = (Quote *)associatedQuotes->data + count;
-            // deep copy the quote data
-            // alternatively could use an array of pointers in ProductQuote and data copying wont be needed
-            memcpy(dest, quote, sizeof(Quote));
-            dest->retailer = strdup(quote->retailer);
-            strcpy(dest->quote_id, quote->quote_id);
-            strcpy(dest->product_code, quote->product_code);
-            dest->availability = quote->availability;
-            dest->price = quote->price;
-            
+            // push the quote pointer to the end of the array
+
+            Quote **dest = quotePtrs + count;
+            *dest = quote;
+
             count++;
         } // END INNER QUOTES LOOP
-        associatedQuotes->used = count;
-        associatedQuotes->limit = allocated;
-        // POSSIBLE ISSUE?: not a deep copy
+
         productQuotes[i].product = product;
-        productQuotes[i].quotes = associatedQuotes;
+        productQuotes[i].quotes = quotePtrs;
+        productQuotes[i].quote_count = count;
 
     } // END PRODUCT LOOP
 
@@ -110,15 +109,16 @@ void FreeProductQuote(void *pq)
         return;
     }
     ProductQuote *pProductQuote = (ProductQuote *)pq;
-    
+
     // Don't free the product pointer as it points to the original product
     // that will be freed elsewhere
-    
-    // Free the quotes wrapper and its contents
+
+    // Free the quotes array - but not the Quote objects themselves
+    // as they point to quotes that will be freed elsewhere
     if (pProductQuote->quotes != NULL)
     {
-        FreeWrapper(pProductQuote->quotes);
-        FreeMemory((void **)&pProductQuote->quotes);
+        free(pProductQuote->quotes);
+        pProductQuote->quotes = NULL;
     }
 }
 
@@ -149,9 +149,9 @@ void DisplayProductsWithQuotes(GenericWrapper *productQuoteWrapper)
         }
         DisplayProduct(pq->product);
         printf("Associated Quotes:\n");
-        for (size_t j = 0; j < pq->quotes->used; j++)
+        for (size_t j = 0; j < pq->quote_count; j++)
         {
-            Quote *quote = (Quote *)pq->quotes->getElementAt(pq->quotes, j);
+            Quote *quote = pq->quotes[j];
             if (quote == NULL)
             {
                 continue;
@@ -160,7 +160,7 @@ void DisplayProductsWithQuotes(GenericWrapper *productQuoteWrapper)
             printf("    Product Code: %s\n", quote->product_code);
             printf("    Store: %s\n", quote->retailer);
             printf("    Price: %.2f\n", quote->price);
-            printf("    Availability: %d\n", GetAvailabilityString(quote->availability));
+            printf("    Availability: %s\n", GetAvailabilityString(quote->availability));
             printf("    ---------------\n");
         }
         printf("===============\n");

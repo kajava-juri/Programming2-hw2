@@ -7,8 +7,9 @@
 
 typedef struct {
     Product *product;
-    // maybe use an array of pointers?
-    GenericWrapper *quotes;
+    // Array of pointers to original Quote objects
+    Quote **quotes;
+    size_t quote_count; // Number of quotes in the array
 } ProductQuote;
 
 /**

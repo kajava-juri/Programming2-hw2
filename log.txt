@@ -348,3 +348,27 @@
 [2025-05-02 21:25:16] INFO: Freeing memory
 [2025-05-02 21:25:16] INFO: Memory freed successfully
 [2025-05-02 21:25:16] INFO: Ending the program
+[2025-05-02 22:40:38] INFO: Starting the program
+[2025-05-02 22:40:38] INFO: Reading products from file
+[2025-05-02 22:40:38] INFO: Products read successfully
+[2025-05-02 22:40:38] INFO: Displaying products
+[2025-05-02 22:40:38] INFO: Products displayed successfully
+[2025-05-02 22:40:38] INFO: Reading quotes from file
+[2025-05-02 22:40:38] INFO: Quotes read successfully
+[2025-05-02 22:40:38] INFO: Displaying quotes
+[2025-05-02 22:40:38] INFO: Grouping products by quotes
+[2025-05-02 22:40:38] INFO: Freeing memory
+[2025-05-02 22:40:38] INFO: Memory freed successfully
+[2025-05-02 22:40:38] INFO: Ending the program
+[2025-05-02 22:44:15] INFO: Starting the program
+[2025-05-02 22:44:15] INFO: Reading products from file
+[2025-05-02 22:44:15] INFO: Products read successfully
+[2025-05-02 22:44:15] INFO: Displaying products
+[2025-05-02 22:44:15] INFO: Products displayed successfully
+[2025-05-02 22:44:15] INFO: Reading quotes from file
+[2025-05-02 22:44:15] INFO: Quotes read successfully
+[2025-05-02 22:44:15] INFO: Displaying quotes
+[2025-05-02 22:44:15] INFO: Grouping products by quotes
+[2025-05-02 22:44:15] INFO: Freeing memory
+[2025-05-02 22:44:15] INFO: Memory freed successfully
+[2025-05-02 22:44:15] INFO: Ending the program
