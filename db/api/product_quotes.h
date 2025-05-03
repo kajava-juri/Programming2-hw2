@@ -33,18 +33,6 @@ void FreeProductQuote(void *pq);
  */
 void DisplayProductsWithQuotes(GenericWrapper *productQuoteWrapper);
 
-/**
- * Edit a product's screen size by its product code.
- * Updates both the in-memory structure and writes changes to the file.
- * 
- * @param products The GenericWrapper containing all products
- * @param productCode The product code to identify the product to edit
- * @param newScreenSize The new screen size value
- * @param filename The name of the file to save changes to
- * @return 1 if successful, 0 if product not found or other error
- */
-int EditProductScreenSize(GenericWrapper *products, const char *productCode, 
-                          float newScreenSize, const char *filename);
 
 /**
  * Edit a quote's availability status by its quote ID.

@@ -23,11 +23,42 @@ typedef struct {
 } Quote;
 
 void FreeQuote(void *pQuote);
+
+/**
+ * @brief Reads quote data from the csv file
+ *
+ * @param pw Wrapper to hold the quotes data and allocation information
+ * @param filename The name of the file to read the quote data from
+ *
+ * @return Number of quotes read, or negative value on error
+ */
 void ReadQuotes(GenericWrapper *pw, char *filename);
 void DisplayQuote(Quote *quote);
 void DisplayQuotes(GenericWrapper *pw);
 void *GetQuoteAt(GenericWrapper *pw, size_t index);
+
+/**
+ * @brief Get the string representation of the availability status
+ *
+ * @param status The availability status
+ * @return Pointer to the string representation of the status
+ */
 char *GetAvailabilityString(AvailabilityStatus status);
+
+/**
+ * @brief Initializes a GenericWrapper for Quote data
+ *
+ * @param qw Pointer to the GenericWrapper to be initialized
+ */
 void InitQuoteWrapper(GenericWrapper *qw);
+
+/**
+ * @brief Get a Quote by its quote code
+ *
+ * @param pw Pointer to the GenericWrapper containing quotes
+ * @param quoteCode The quote code to search for
+ * @return Pointer to the Quote if found, NULL otherwise
+ */
+Quote *GetQuoteByCode(GenericWrapper *pw, const char *quoteCode);
 
 #endif // QUOTES_H

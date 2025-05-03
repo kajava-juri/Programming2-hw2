@@ -167,13 +167,6 @@ void DisplayProductsWithQuotes(GenericWrapper *productQuoteWrapper)
     }
 }
 
-int EditProductScreenSize(GenericWrapper *products, const char *productCode,
-                          float newScreenSize, const char *filename)
-{
-    // Implementation to be filled in
-    return 0;
-}
-
 int EditQuoteAvailability(GenericWrapper *quotes, const char *quoteId,
                           AvailabilityStatus newAvailability, const char *filename)
 {

@@ -18,9 +18,50 @@ typedef struct {
 } Product;
 
 void FreeProduct(void *pProduct);
+
+/**
+ * @brief Reads product data from the csv file
+ *
+ * @param pw Wrapper to hold the product data and allocation information
+ * @param filename The name of the file to read the product data from
+ *
+ * @return Number of products read, or negative value on error
+ */
 void ReadProducts(GenericWrapper *pw, char *filename);
+
+/**
+ * @brief Displays the product information
+ *
+ * @param product Pointer to the Product to be displayed
+ */
 void DisplayProduct(Product *product);
+
+/**
+ * @brief Displays all products in the GenericWrapper
+ *
+ * @param pw Pointer to the GenericWrapper containing products
+ */
 void DisplayProducts(GenericWrapper *pw);
+
+/**
+ * @brief Gets a Product at given index
+ *
+ * @param pw Pointer to the GenericWrapper containing products
+ * @param productCode The product code to search for
+ * @return Pointer to the Product if found, NULL otherwise
+ */
 void *GetProductAt(GenericWrapper *pw, size_t index);
+
+/**
+ * @brief Gets a Product by its product code
+ *
+ * @param pw Pointer to the GenericWrapper containing products
+ * @param productCode The product code to search for
+ * @return Pointer to the Product if found, NULL otherwise
+ */
+Product *GetProductByCode(GenericWrapper *pw, const char *productCode);
+
+int EditProductScreenSize(Product *product, const char *productCode,
+    float newScreenSize, const char *filename);
 
 #endif // PRODUCTS_H

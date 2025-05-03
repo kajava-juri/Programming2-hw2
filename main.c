@@ -6,6 +6,7 @@
 #include "db/api/product_quotes.h"
 #include "utils.h"
 #include "logger.h"
+#include "menu.h"
 
 int main(void)
 {
@@ -40,7 +41,32 @@ int main(void)
 
     GenericWrapper *productQuoteWrapper = GroupByProduct(&pw, &qw);
     LogInfo("Grouping products by quotes");
-    DisplayProductsWithQuotes(productQuoteWrapper);
+    //DisplayProductsWithQuotes(productQuoteWrapper);
+
+    // Declare option variable before the loop
+    int option;
+    // Get menu selection and check if it's not 0
+    while ((option = GetMenuSelection()) != 0)
+    {
+        switch (option) // Use option as the switch expression
+        {
+        case 1:
+            DisplayProductsWithQuotes(productQuoteWrapper);
+            break;
+        
+        case 2:
+            MenuEditProductOrQuote(&pw, &qw);
+            break;
+            
+        case 3:
+            
+            break;
+            
+        default:
+            printf("Invalid option: %d\n", option);
+            break;
+        }
+    }
 
     LogInfo("Freeing memory");
     FreeWrapper(&qw);

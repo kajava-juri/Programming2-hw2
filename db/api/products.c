@@ -33,14 +33,7 @@ void *GetProductAt(GenericWrapper *pw, size_t index)
     return (void *)pProduct;
 }
 
-/**
- * @brief Reads product data from the csv file
- *
- * @param pw Wrapper to hold the product data and allocation information
- * @param filename The name of the file to read the product data from
- *
- * @return Number of products read, or negative value on error
- */
+
 void ReadProducts(GenericWrapper *pw, char *filename)
 {
     LogInfo("Reading products from file");
@@ -142,4 +135,73 @@ void DisplayProducts(GenericWrapper *pw)
         DisplayProduct(&products[i]);
         printf("\n");
     }
+}
+
+Product *GetProductByCode(GenericWrapper *pw, const char *productCode)
+{
+    if (pw == NULL || pw->data == NULL || productCode == NULL)
+    {
+        return NULL;
+    }
+    Product *products = (Product *)pw->data;
+    for (size_t i = 0; i < pw->used; i++)
+    {
+        if (strcmp(products[i].product_code, productCode) == 0)
+        {
+            return &products[i];
+        }
+    }
+    return NULL;
+}
+
+int EditProductScreenSize(Product *product, const char *productCode,
+                           float newScreenSize, const char *filename)
+{
+    if (product == NULL || productCode == NULL || filename == NULL)
+    {
+        return 0;
+    }
+
+    product->screen_size_inches = newScreenSize;
+
+    // Save changes to the file
+    FILE *fp = fopen(filename, "rb+");
+    FILE * fTemp;
+    if (fp == NULL)
+    {
+        LogError("Failed to open products file for writing");
+        perror("Failed to open products file for writing");
+        return 0;
+    }
+    fTemp = fopen("data/replace.tmp.csv", "w"); 
+    if (fTemp == NULL)
+    {
+        LogError("Failed to open temporary file for writing");
+        fclose(fp);
+        return 0;
+    }
+
+    // Move the file pointer until the product code is found
+    char line[256];
+    while (fgets(line, sizeof(line), fp) != NULL)
+    {
+            
+        if (strncmp(line, productCode, PRODUCT_CODE_LEN) == 0)
+        {
+            fprintf(fTemp, "%s,%s,%d,%.2f,%s\n", product->product_code, product->name,
+                    product->ram_mb, product->screen_size_inches, product->operating_system);
+        }
+        else
+        {
+            // Write the line to the temporary file
+            fputs(line, fTemp);
+        }
+    }
+    fclose(fTemp);
+    fclose(fp);
+
+    remove(filename);
+    rename("data/replace.tmp.csv", filename);
+
+    return 1;
 }

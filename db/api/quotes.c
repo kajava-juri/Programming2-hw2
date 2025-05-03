@@ -17,11 +17,6 @@ const char* availability_strings[] = {
     [OUT_OF_STOCK] = "In Stock"
 };
 
-/**
- * @brief Initializes a GenericWrapper for Quote data
- *
- * @param qw Pointer to the GenericWrapper to be initialized
- */
 void InitQuoteWrapper(GenericWrapper *qw)
 {
     if (qw == NULL) 
@@ -36,12 +31,6 @@ void InitQuoteWrapper(GenericWrapper *qw)
     qw->getElementAt = GetQuoteAt;
 }
 
-/**
- * @brief Get the string representation of the availability status
- *
- * @param status The availability status
- * @return Pointer to the string representation of the status
- */
 char *GetAvailabilityString(AvailabilityStatus status)
 {
     if (status < 0 || status >= sizeof(availability_strings) / sizeof(availability_strings[0])) 
@@ -71,14 +60,6 @@ void *GetQuoteAt(GenericWrapper *pw, size_t index)
     return (void *)pQuote;
 }
 
-/**
- * @brief Reads quote data from the csv file
- *
- * @param pw Wrapper to hold the quotes data and allocation information
- * @param filename The name of the file to read the quote data from
- *
- * @return Number of quotes read, or negative value on error
- */
 void ReadQuotes(GenericWrapper *pw, char *filename)
 {
     LogInfo("Reading quotes from file");
@@ -200,4 +181,21 @@ void DisplayQuotes(GenericWrapper *pw)
         DisplayQuote(&quotes[i]);
         printf("\n");
     }
+}
+
+Quote *GetQuoteByCode(GenericWrapper *pw, const char *quoteCode)
+{
+    if (pw == NULL || pw->data == NULL) 
+    {
+        return NULL;
+    }
+    Quote *quotes = (Quote *)pw->data;
+    for (size_t i = 0; i < pw->used; i++) 
+    {
+        if (strcmp(quotes[i].quote_id, quoteCode) == 0) 
+        {
+            return &quotes[i];
+        }
+    }
+    return NULL;
 }

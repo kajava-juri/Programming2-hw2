@@ -15,10 +15,9 @@ void DisplayMainMenu();
  * @param quotes The GenericWrapper containing all quotes
  * @param productsFile The filename for products data
  * @param quotesFile The filename for quotes data
- * @return 1 to continue, 0 to exit
+ * @return selected menu option or 0 to exit
  */
-int ProcessMenuSelection(GenericWrapper *products, GenericWrapper *quotes, 
-                        const char *productsFile, const char *quotesFile);
+int GetMenuSelection();
 
 /**
  * Display and handle the "Display Products with Quotes" menu option
@@ -26,7 +25,7 @@ int ProcessMenuSelection(GenericWrapper *products, GenericWrapper *quotes,
  * @param products The GenericWrapper containing all products
  * @param quotes The GenericWrapper containing all quotes
  */
-void MenuDisplayProductsWithQuotes(GenericWrapper *products, GenericWrapper *quotes);
+void MenuDisplayProductsWithQuotes(GenericWrapper *productQuotes);
 
 /**
  * Display and handle the "Edit Product/Quote" menu option
@@ -36,8 +35,7 @@ void MenuDisplayProductsWithQuotes(GenericWrapper *products, GenericWrapper *quo
  * @param productsFile The filename for products data
  * @param quotesFile The filename for quotes data
  */
-void MenuEditProductOrQuote(GenericWrapper *products, GenericWrapper *quotes, 
-                          const char *productsFile, const char *quotesFile);
+void MenuEditProductOrQuote(GenericWrapper *products, GenericWrapper *quotes);
 
 /**
  * Display and handle the "Search by Store" menu option

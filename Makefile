@@ -5,7 +5,7 @@
 # $< : first dependency
 # $* : target without extension
 
-SRC = main.c logger.c utils.c db/data_api.c db/api/products.c db/api/quotes.c db/api/product_quotes.c
+SRC = main.c logger.c utils.c menu.c db/data_api.c db/api/products.c db/api/quotes.c db/api/product_quotes.c
 OBJ = $(SRC:.c=.o)
 CC = gcc
 CFLAGS = -Wall -Wextra -pedantic -fanalyzer -g -fsanitize=address
