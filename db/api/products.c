@@ -206,3 +206,11 @@ int ApplyProductEdits(Product *product, const char *productCode, const char *fil
 
     return 1;
 }
+
+// Comparison function for sorting products by RAM
+int CompareProductsByRam(const void *a, const void *b)
+{
+    Product *productA = *(Product **)a;
+    Product *productB = *(Product **)b;
+    return productB->ram_mb - productA->ram_mb;  // Sort ascending by RAM
+}

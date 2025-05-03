@@ -160,5 +160,44 @@ void MenuEditProductOrQuote(GenericWrapper *products, GenericWrapper *quotes)
 
 void MenuSearchByStore(GenericWrapper *products, GenericWrapper *quotes)
 {
-    // Implementation to be filled in
+    char storeName[MAX_RETAILER_LEN + 1];
+    
+    printf("Enter store name to search: ");
+    
+    
+    // Use fgets to read the whole line including spaces
+    fgets(storeName, MAX_RETAILER_LEN, stdin);
+    
+    // Remove the trailing newline character if present
+    size_t len = strlen(storeName);
+    if (len > 0 && storeName[len-1] == '\n') {
+        storeName[len-1] = '\0';
+    }
+
+    // Create a temporary wrapper to hold search results if needed elsewhere
+    GenericWrapper results = {0};
+    
+    // Search for products by store name and get the count
+    int foundCount = SearchProductsByStore(products, quotes, storeName, &results);
+    
+    if (foundCount <= 0) {
+        printf("No products found in stock at store '%s'.\n", storeName);
+        return;
+    }
+    
+    printf("\nFound %d products in stock at '%s' (%s), ordered by RAM:\n", foundCount, storeName);
+    printf("----------------------------------------------------------\n");
+    
+    // Display each product in the results
+    for (size_t i = 0; i < results.used; i++) {
+        // Get the pointer to the product
+        Product *product = ((Product **)results.data)[i];
+        if (product != NULL) {
+            DisplayProduct(product);
+            printf("----------------------------------------------------------\n");
+        }
+    }
+    
+    // Free the results data 
+    FreeWrapper(&results);
 }

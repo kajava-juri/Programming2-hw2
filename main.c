@@ -59,7 +59,7 @@ int main(void)
             break;
             
         case 3:
-            
+            MenuSearchByStore(&pw, &qw);
             break;
             
         default:

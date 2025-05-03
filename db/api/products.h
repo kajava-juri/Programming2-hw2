@@ -72,4 +72,6 @@ Product *GetProductByCode(GenericWrapper *pw, const char *productCode);
  */
 int ApplyProductEdits(Product *product, const char *productCode, const char *filename);
 
+int CompareProductsByRam(const void *a, const void *b);
+
 #endif // PRODUCTS_H

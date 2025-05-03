@@ -124,3 +124,48 @@
 [2025-05-03 14:11:31] INFO: Quotes read successfully
 [2025-05-03 14:11:31] INFO: Displaying quotes
 [2025-05-03 14:11:31] INFO: Grouping products by quotes
+[2025-05-03 14:34:40] INFO: Starting the program
+[2025-05-03 14:34:40] INFO: Reading products from file
+[2025-05-03 14:34:40] INFO: Products read successfully
+[2025-05-03 14:34:40] INFO: Displaying products
+[2025-05-03 14:34:40] INFO: Products displayed successfully
+[2025-05-03 14:34:40] INFO: Reading quotes from file
+[2025-05-03 14:34:40] INFO: Quotes read successfully
+[2025-05-03 14:34:40] INFO: Displaying quotes
+[2025-05-03 14:34:40] INFO: Grouping products by quotes
+[2025-05-03 14:37:52] INFO: Starting the program
+[2025-05-03 14:37:52] INFO: Reading products from file
+[2025-05-03 14:37:52] INFO: Products read successfully
+[2025-05-03 14:37:52] INFO: Displaying products
+[2025-05-03 14:37:52] INFO: Products displayed successfully
+[2025-05-03 14:37:52] INFO: Reading quotes from file
+[2025-05-03 14:37:52] INFO: Quotes read successfully
+[2025-05-03 14:37:52] INFO: Displaying quotes
+[2025-05-03 14:37:52] INFO: Grouping products by quotes
+[2025-05-03 14:38:24] INFO: Starting the program
+[2025-05-03 14:38:24] INFO: Reading products from file
+[2025-05-03 14:38:24] INFO: Products read successfully
+[2025-05-03 14:38:24] INFO: Displaying products
+[2025-05-03 14:38:24] INFO: Products displayed successfully
+[2025-05-03 14:38:24] INFO: Reading quotes from file
+[2025-05-03 14:38:24] INFO: Quotes read successfully
+[2025-05-03 14:38:24] INFO: Displaying quotes
+[2025-05-03 14:38:24] INFO: Grouping products by quotes
+[2025-05-03 14:39:01] INFO: Starting the program
+[2025-05-03 14:39:01] INFO: Reading products from file
+[2025-05-03 14:39:01] INFO: Products read successfully
+[2025-05-03 14:39:01] INFO: Displaying products
+[2025-05-03 14:39:01] INFO: Products displayed successfully
+[2025-05-03 14:39:01] INFO: Reading quotes from file
+[2025-05-03 14:39:01] INFO: Quotes read successfully
+[2025-05-03 14:39:01] INFO: Displaying quotes
+[2025-05-03 14:39:01] INFO: Grouping products by quotes
+[2025-05-03 14:40:04] INFO: Starting the program
+[2025-05-03 14:40:04] INFO: Reading products from file
+[2025-05-03 14:40:04] INFO: Products read successfully
+[2025-05-03 14:40:04] INFO: Displaying products
+[2025-05-03 14:40:04] INFO: Products displayed successfully
+[2025-05-03 14:40:04] INFO: Reading quotes from file
+[2025-05-03 14:40:04] INFO: Quotes read successfully
+[2025-05-03 14:40:04] INFO: Displaying quotes
+[2025-05-03 14:40:04] INFO: Grouping products by quotes

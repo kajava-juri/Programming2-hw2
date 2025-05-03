@@ -177,18 +177,73 @@ int EditQuoteAvailability(GenericWrapper *quotes, const char *quoteId,
 int SearchProductsByStore(GenericWrapper *products, GenericWrapper *quotes,
                           const char *storeName, GenericWrapper *results)
 {
-    // Implementation to be filled in
-    return 0;
-}
-
-int WriteProductsToFile(GenericWrapper *products, const char *filename)
-{
-    // Implementation to be filled in
-    return 0;
-}
-
-int WriteQuotesToFile(GenericWrapper *quotes, const char *filename)
-{
-    // Implementation to be filled in
-    return 0;
+    if (products == NULL || quotes == NULL || storeName == NULL || results == NULL) {
+        return 0;
+    }
+    
+    // Initialize results to store pointers to Product
+    results->size = sizeof(Product*);
+    results->used = 0;
+    results->limit = 10; // Start with space for 10 product pointers
+    results->data = malloc(results->limit * sizeof(Product*));
+    results->getElementAt = GetProductAt;
+    results->freeData = NULL; // We're storing pointers, don't free the original products
+    
+    if (results->data == NULL) {
+        LogError("Failed to allocate memory for results data");
+        return 0;
+    }
+    
+    // Find all products available at the specified store
+    for (size_t i = 0; i < quotes->used; i++) {
+        Quote *quote = GetQuoteAt(quotes, i);
+        
+        if (quote == NULL || 
+            strcmp(quote->retailer, storeName) != 0 || 
+            quote->availability != IN_STOCK) {
+            continue;
+        }
+        
+        // Find the product associated with this quote
+        Product *product = GetProductByCode(products, quote->product_code);
+        if (product == NULL) {
+            continue;
+        }
+        
+        // Check if product already added
+        int alreadyAdded = 0;
+        for (size_t j = 0; j < results->used; j++) {
+            Product *addedProduct = (Product *)results->getElementAt(results, j);
+            if (strcmp(addedProduct->product_code, product->product_code) == 0) {
+                alreadyAdded = 1;
+                break;
+            }
+        }
+        
+        if (alreadyAdded) {
+            continue;
+        }
+        
+        // Resize results array
+        if (results->used >= results->limit) {
+            results->limit += 10;
+            void *newData = realloc(results->data, results->limit * sizeof(Product*));
+            if (newData == NULL) {
+                LogError("Failed to reallocate memory for results");
+                return results->used; // Return what we've got so far
+            }
+            results->data = newData;
+        }
+        
+        // Find the end of the results array and add the product pointer 
+        Product **productPtr = (Product**)results->data + results->used;
+        *productPtr = product;
+        
+        results->used++;
+    }
+    
+    // Sort the products by RAM using qsort
+    qsort(results->data, results->used, sizeof(Product*), CompareProductsByRam);
+    
+    return results->used;
 }
