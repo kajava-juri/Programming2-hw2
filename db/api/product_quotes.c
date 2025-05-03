@@ -139,32 +139,53 @@ void *GetProductQuoteAt(GenericWrapper *pw, size_t index)
 
 void DisplayProductsWithQuotes(GenericWrapper *productQuoteWrapper)
 {
+    printf("\n==========================================================\n");
+    printf("      P R O D U C T S   W I T H   Q U O T E S            \n");
+    printf("==========================================================\n\n");
+
     ProductQuote *productQuotes = (ProductQuote *)productQuoteWrapper->data;
     for (size_t i = 0; i < productQuoteWrapper->used; i++)
     {
         ProductQuote *pq = &productQuotes[i];
-        if (pq == NULL)
+        if (pq == NULL || pq->product == NULL)
         {
             continue;
         }
-        DisplayProduct(pq->product);
-        printf("Associated Quotes:\n");
-        for (size_t j = 0; j < pq->quote_count; j++)
-        {
-            Quote *quote = pq->quotes[j];
-            if (quote == NULL)
+        
+        printf("\n  Product #%zu:\n", i+1);
+        printf("  ----------------------------------------------------------\n");
+        printf("    Product Code:  %s\n", pq->product->product_code);
+        printf("    Name:          %s\n", pq->product->name);
+        printf("    RAM:           %d MB\n", pq->product->ram_mb);
+        printf("    Screen Size:   %.2f inches\n", pq->product->screen_size_inches);
+        printf("    OS:            %s\n", pq->product->operating_system);
+        
+        if (pq->quote_count > 0) {
+            printf("\n    Associated Quotes (%zu):\n", pq->quote_count);
+            printf("    --------------------------------------------------\n");
+            
+            for (size_t j = 0; j < pq->quote_count; j++)
             {
-                continue;
+                Quote *quote = pq->quotes[j];
+                if (quote == NULL)
+                {
+                    continue;
+                }
+                printf("      Quote #%zu:\n", j+1);
+                printf("        ID:           %s\n", quote->quote_id);
+                printf("        Store:        %s\n", quote->retailer);
+                printf("        Price:        %.2f\n", quote->price);
+                printf("        Availability: %s\n", GetAvailabilityString(quote->availability));
+                if (j < pq->quote_count - 1) {
+                    printf("        ........................\n");
+                }
             }
-            printf("    Quote ID: %s\n", quote->quote_id);
-            printf("    Product Code: %s\n", quote->product_code);
-            printf("    Store: %s\n", quote->retailer);
-            printf("    Price: %.2f\n", quote->price);
-            printf("    Availability: %s\n", GetAvailabilityString(quote->availability));
-            printf("    ---------------\n");
+        } else {
+            printf("\n    No quotes available for this product.\n");
         }
-        printf("===============\n");
+        printf("  ----------------------------------------------------------\n");
     }
+    printf("\n");
 }
 
 int EditQuoteAvailability(GenericWrapper *quotes, const char *quoteId,

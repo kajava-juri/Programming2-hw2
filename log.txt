@@ -169,3 +169,36 @@
 [2025-05-03 14:40:04] INFO: Quotes read successfully
 [2025-05-03 14:40:04] INFO: Displaying quotes
 [2025-05-03 14:40:04] INFO: Grouping products by quotes
+[2025-05-03 14:49:46] INFO: Starting the program
+[2025-05-03 14:49:46] INFO: Reading products from file
+[2025-05-03 14:49:46] INFO: Products read successfully
+[2025-05-03 14:49:46] INFO: Displaying products
+[2025-05-03 14:49:46] INFO: Products displayed successfully
+[2025-05-03 14:49:46] INFO: Reading quotes from file
+[2025-05-03 14:49:46] INFO: Quotes read successfully
+[2025-05-03 14:49:46] INFO: Displaying quotes
+[2025-05-03 14:49:46] INFO: Grouping products by quotes
+[2025-05-03 14:49:48] INFO: Freeing memory
+[2025-05-03 14:49:48] INFO: Memory freed successfully
+[2025-05-03 14:49:48] INFO: Ending the program
+[2025-05-03 15:04:22] INFO: Starting the program
+[2025-05-03 15:04:22] INFO: Reading products from file
+[2025-05-03 15:04:22] INFO: Products read successfully
+[2025-05-03 15:04:22] INFO: Displaying products
+[2025-05-03 15:04:22] INFO: Products displayed successfully
+[2025-05-03 15:04:22] INFO: Reading quotes from file
+[2025-05-03 15:04:22] INFO: Quotes read successfully
+[2025-05-03 15:04:22] INFO: Displaying quotes
+[2025-05-03 15:04:22] INFO: Grouping products by quotes
+[2025-05-03 15:06:28] INFO: Starting the program
+[2025-05-03 15:06:28] INFO: Reading products from file
+[2025-05-03 15:06:28] INFO: Products read successfully
+[2025-05-03 15:06:28] INFO: Displaying products
+[2025-05-03 15:06:28] INFO: Products displayed successfully
+[2025-05-03 15:06:28] INFO: Reading quotes from file
+[2025-05-03 15:06:28] INFO: Quotes read successfully
+[2025-05-03 15:06:28] INFO: Displaying quotes
+[2025-05-03 15:06:28] INFO: Grouping products by quotes
+[2025-05-03 15:07:39] INFO: Freeing memory
+[2025-05-03 15:07:39] INFO: Memory freed successfully
+[2025-05-03 15:07:39] INFO: Ending the program
