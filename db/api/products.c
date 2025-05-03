@@ -154,17 +154,15 @@ Product *GetProductByCode(GenericWrapper *pw, const char *productCode)
     return NULL;
 }
 
-int EditProductScreenSize(Product *product, const char *productCode,
-                           float newScreenSize, const char *filename)
+int ApplyProductEdits(Product *product, const char *productCode, const char *filename)
 {
     if (product == NULL || productCode == NULL || filename == NULL)
     {
         return 0;
     }
 
-    product->screen_size_inches = newScreenSize;
-
-    // Save changes to the file
+    // Write everyithing to a temporary file
+    // and then replace the original file with the temporary file
     FILE *fp = fopen(filename, "rb+");
     FILE * fTemp;
     if (fp == NULL)
@@ -185,7 +183,8 @@ int EditProductScreenSize(Product *product, const char *productCode,
     char line[256];
     while (fgets(line, sizeof(line), fp) != NULL)
     {
-            
+        // If line contains the searched product code, replace with the updated product
+        // else write the line to the temporary file
         if (strncmp(line, productCode, PRODUCT_CODE_LEN) == 0)
         {
             fprintf(fTemp, "%s,%s,%d,%.2f,%s\n", product->product_code, product->name,
@@ -193,13 +192,15 @@ int EditProductScreenSize(Product *product, const char *productCode,
         }
         else
         {
-            // Write the line to the temporary file
             fputs(line, fTemp);
         }
     }
+
+    // save the changes
     fclose(fTemp);
     fclose(fp);
 
+    // Replace the original file with the temporary file
     remove(filename);
     rename("data/replace.tmp.csv", filename);
 

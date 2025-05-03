@@ -8,11 +8,6 @@
 #define MAX_PRODUCTS 100
 #define MAX_QUOTES 100
 
-typedef enum {
-    TYPE_PRODUCT,
-    TYPE_QUOTE,
-} DataType;
-
 typedef struct {
     void *data;
 

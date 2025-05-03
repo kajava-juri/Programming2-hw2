@@ -61,7 +61,15 @@ void *GetProductAt(GenericWrapper *pw, size_t index);
  */
 Product *GetProductByCode(GenericWrapper *pw, const char *productCode);
 
-int EditProductScreenSize(Product *product, const char *productCode,
-    float newScreenSize, const char *filename);
+/**
+ * @brief Edits the screen size of a product
+ *
+ * @param product Pointer to the Product to be edited
+ * @param productCode The product code to search for
+ * @param newScreenSize The new screen size to set
+ * @param filename The name of the file to save the changes to
+ * @return 1 on success, 0 on failure
+ */
+int ApplyProductEdits(Product *product, const char *productCode, const char *filename);
 
 #endif // PRODUCTS_H

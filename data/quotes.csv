@@ -1,5 +1,5 @@
 quote_id,product_code,retailer,price,availability
-Q003,SP002,Amazon,899.00,In Stock
+Q003,SP002,Amazon,899.00,Out of Stock
 Q004,SP002,Apple Store,999.00,In Stock
 Q005,SP003,Google Store,699.00,Out of Stock
 Q006,SP003,Best Buy,749.00,In Stock

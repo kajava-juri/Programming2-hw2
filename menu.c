@@ -86,7 +86,40 @@ void MenuEditProductOrQuote(GenericWrapper *products, GenericWrapper *quotes)
             }
             printf("Quote found:\n");
             DisplayQuote(pQuote);
-            // Edit Quote
+            // Edit Quote availability 
+            char *newAvailability;
+            printf("Enter new availability: \n"
+            "1. In Stock    2. Out of Stock\n");
+            int availabilityOption;
+            scanf("%d", &availabilityOption);
+            // Keep asking until a valid option is entered
+            while (availabilityOption != 1 && availabilityOption != 2)
+            {
+                printf("Invalid option. Please enter 1 for In Stock or 2 for Out of Stock: ");
+                scanf("%d", &availabilityOption);
+                // Clear the input buffer
+                while(getchar() != '\n' && getchar() != EOF);
+            }
+
+            // Update the quote's availability based on selection
+            if (availabilityOption == 1)
+            {
+                pQuote->availability = IN_STOCK;
+            }
+            else if (availabilityOption == 2)
+            {
+                pQuote->availability = OUT_OF_STOCK;
+            }
+
+            // Apply the changes to the quote
+            if (ApplyQuoteEdits(pQuote, userInput, "data/quotes.csv") == 1)
+            {
+                printf("Quote availability updated successfully.\n");
+            }
+            else
+            {
+                printf("Failed to update quote availability.\n");
+            }
         }
         else if(userInput[0] == 'S' && userInput[1] == 'P')
         {
@@ -111,9 +144,9 @@ void MenuEditProductOrQuote(GenericWrapper *products, GenericWrapper *quotes)
             // Edit Product
             float newScreenSize;
             printf("Enter new screen size: ");
-            scanf("%f", &newScreenSize);
+            scanf("%f", &pProduct->screen_size_inches);
             // Edit the product screen size
-            if (EditProductScreenSize(pProduct, userInput, newScreenSize, "data/products.csv") == 0)
+            if (ApplyProductEdits(pProduct, userInput, "data/products.csv") == 0)
             {
                 printf("Product screen size updated successfully.\n");
             }

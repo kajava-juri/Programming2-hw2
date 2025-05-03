@@ -61,4 +61,16 @@ void InitQuoteWrapper(GenericWrapper *qw);
  */
 Quote *GetQuoteByCode(GenericWrapper *pw, const char *quoteCode);
 
+/**
+ * @brief Edits the availability of a quote
+ *
+ * @param quote Pointer to the Quote to be edited
+ * @param quoteCode The quote code to search for
+ * @param newAvailability The new availability status
+ * @param filename The name of the file to write the updated data to
+ *
+ * @return 1 on success, 0 on failure
+ */
+int ApplyQuoteEdits(Quote *quote, const char *quoteCode, const char *filename);
+
 #endif // QUOTES_H
