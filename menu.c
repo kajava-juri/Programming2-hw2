@@ -1,4 +1,5 @@
 #include "menu.h"
+#include "main.h"
 #include "db/api/product_quotes.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -136,7 +137,7 @@ void MenuEditProductOrQuote(GenericWrapper *products, GenericWrapper *quotes)
             }
 
             // Apply the changes to the quote
-            if (ApplyQuoteEdits(pQuote, userInput, "data/quotes.csv") == 1)
+            if (ApplyQuoteEdits(pQuote, userInput, QUOTE_FILE) == 1)
             {
                 printf("\n  Quote availability updated successfully.\n\n");
             }
@@ -182,7 +183,7 @@ void MenuEditProductOrQuote(GenericWrapper *products, GenericWrapper *quotes)
             scanf("%f", &pProduct->screen_size_inches);
             
             // Edit the product screen size
-            if (ApplyProductEdits(pProduct, userInput, "data/products.csv") == 1)
+            if (ApplyProductEdits(pProduct, userInput, PRODUCT_FILE) == 1)
             {
                 printf("\n  Product screen size updated successfully to %.2f inches.\n\n", pProduct->screen_size_inches);
             }
@@ -253,5 +254,5 @@ void MenuSearchByStore(GenericWrapper *products, GenericWrapper *quotes)
     printf("\n");
     
     // Free the results data 
-    FreeWrapper(&results);
+    FreeMemory((void **)&results.data);
 }

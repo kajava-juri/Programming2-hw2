@@ -1,204 +1,102 @@
-[2025-05-03 13:54:24] INFO: Starting the program
-[2025-05-03 13:54:24] INFO: Reading products from file
-[2025-05-03 13:54:24] INFO: Products read successfully
-[2025-05-03 13:54:24] INFO: Displaying products
-[2025-05-03 13:54:24] INFO: Products displayed successfully
-[2025-05-03 13:54:24] INFO: Reading quotes from file
-[2025-05-03 13:54:24] INFO: Quotes read successfully
-[2025-05-03 13:54:24] INFO: Displaying quotes
-[2025-05-03 13:54:24] INFO: Grouping products by quotes
-[2025-05-03 13:56:12] INFO: Starting the program
-[2025-05-03 13:56:12] INFO: Reading products from file
-[2025-05-03 13:56:12] INFO: Products read successfully
-[2025-05-03 13:56:12] INFO: Displaying products
-[2025-05-03 13:56:12] INFO: Products displayed successfully
-[2025-05-03 13:56:12] INFO: Reading quotes from file
-[2025-05-03 13:56:12] INFO: Quotes read successfully
-[2025-05-03 13:56:12] INFO: Displaying quotes
-[2025-05-03 13:56:12] INFO: Grouping products by quotes
-[2025-05-03 13:59:52] INFO: Starting the program
-[2025-05-03 13:59:52] INFO: Reading products from file
-[2025-05-03 13:59:52] INFO: Products read successfully
-[2025-05-03 13:59:52] INFO: Displaying products
-[2025-05-03 13:59:52] INFO: Products displayed successfully
-[2025-05-03 13:59:52] INFO: Reading quotes from file
-[2025-05-03 13:59:52] INFO: Quotes read successfully
-[2025-05-03 13:59:52] INFO: Displaying quotes
-[2025-05-03 13:59:52] INFO: Grouping products by quotes
-[2025-05-03 14:00:16] INFO: Starting the program
-[2025-05-03 14:00:16] INFO: Reading products from file
-[2025-05-03 14:00:16] INFO: Products read successfully
-[2025-05-03 14:00:16] INFO: Displaying products
-[2025-05-03 14:00:16] INFO: Products displayed successfully
-[2025-05-03 14:00:16] INFO: Reading quotes from file
-[2025-05-03 14:00:16] INFO: Quotes read successfully
-[2025-05-03 14:00:16] INFO: Displaying quotes
-[2025-05-03 14:00:16] INFO: Grouping products by quotes
-[2025-05-03 14:01:01] INFO: Starting the program
-[2025-05-03 14:01:01] INFO: Reading products from file
-[2025-05-03 14:01:01] INFO: Products read successfully
-[2025-05-03 14:01:01] INFO: Displaying products
-[2025-05-03 14:01:01] INFO: Products displayed successfully
-[2025-05-03 14:01:01] INFO: Reading quotes from file
-[2025-05-03 14:01:01] INFO: Quotes read successfully
-[2025-05-03 14:01:01] INFO: Displaying quotes
-[2025-05-03 14:01:01] INFO: Grouping products by quotes
-[2025-05-03 14:02:30] INFO: Starting the program
-[2025-05-03 14:02:30] INFO: Reading products from file
-[2025-05-03 14:02:30] INFO: Products read successfully
-[2025-05-03 14:02:30] INFO: Displaying products
-[2025-05-03 14:02:30] INFO: Products displayed successfully
-[2025-05-03 14:02:30] INFO: Reading quotes from file
-[2025-05-03 14:02:30] INFO: Quotes read successfully
-[2025-05-03 14:02:30] INFO: Displaying quotes
-[2025-05-03 14:02:30] INFO: Grouping products by quotes
-[2025-05-03 14:03:19] INFO: Starting the program
-[2025-05-03 14:03:19] INFO: Reading products from file
-[2025-05-03 14:03:19] INFO: Products read successfully
-[2025-05-03 14:03:19] INFO: Displaying products
-[2025-05-03 14:03:19] INFO: Products displayed successfully
-[2025-05-03 14:03:19] INFO: Reading quotes from file
-[2025-05-03 14:03:19] INFO: Quotes read successfully
-[2025-05-03 14:03:19] INFO: Displaying quotes
-[2025-05-03 14:03:19] INFO: Grouping products by quotes
-[2025-05-03 14:04:26] INFO: Starting the program
-[2025-05-03 14:04:26] INFO: Reading products from file
-[2025-05-03 14:04:26] INFO: Products read successfully
-[2025-05-03 14:04:26] INFO: Displaying products
-[2025-05-03 14:04:26] INFO: Products displayed successfully
-[2025-05-03 14:04:26] INFO: Reading quotes from file
-[2025-05-03 14:04:26] INFO: Quotes read successfully
-[2025-05-03 14:04:26] INFO: Displaying quotes
-[2025-05-03 14:04:26] INFO: Grouping products by quotes
-[2025-05-03 14:06:24] INFO: Starting the program
-[2025-05-03 14:06:24] INFO: Reading products from file
-[2025-05-03 14:06:24] INFO: Products read successfully
-[2025-05-03 14:06:24] INFO: Displaying products
-[2025-05-03 14:06:24] INFO: Products displayed successfully
-[2025-05-03 14:06:24] INFO: Reading quotes from file
-[2025-05-03 14:06:24] INFO: Quotes read successfully
-[2025-05-03 14:06:24] INFO: Displaying quotes
-[2025-05-03 14:06:24] INFO: Grouping products by quotes
-[2025-05-03 14:07:04] INFO: Starting the program
-[2025-05-03 14:07:04] INFO: Reading products from file
-[2025-05-03 14:07:04] INFO: Products read successfully
-[2025-05-03 14:07:04] INFO: Displaying products
-[2025-05-03 14:07:04] INFO: Products displayed successfully
-[2025-05-03 14:07:04] INFO: Reading quotes from file
-[2025-05-03 14:07:04] INFO: Quotes read successfully
-[2025-05-03 14:07:04] INFO: Displaying quotes
-[2025-05-03 14:07:04] INFO: Grouping products by quotes
-[2025-05-03 14:09:02] INFO: Starting the program
-[2025-05-03 14:09:02] INFO: Reading products from file
-[2025-05-03 14:09:02] INFO: Products read successfully
-[2025-05-03 14:09:02] INFO: Displaying products
-[2025-05-03 14:09:02] INFO: Products displayed successfully
-[2025-05-03 14:09:02] INFO: Reading quotes from file
-[2025-05-03 14:09:02] INFO: Quotes read successfully
-[2025-05-03 14:09:02] INFO: Displaying quotes
-[2025-05-03 14:09:02] INFO: Grouping products by quotes
-[2025-05-03 14:10:09] INFO: Starting the program
-[2025-05-03 14:10:09] INFO: Reading products from file
-[2025-05-03 14:10:09] INFO: Products read successfully
-[2025-05-03 14:10:09] INFO: Displaying products
-[2025-05-03 14:10:09] INFO: Products displayed successfully
-[2025-05-03 14:10:09] INFO: Reading quotes from file
-[2025-05-03 14:10:09] INFO: Quotes read successfully
-[2025-05-03 14:10:09] INFO: Displaying quotes
-[2025-05-03 14:10:09] INFO: Grouping products by quotes
-[2025-05-03 14:10:50] INFO: Starting the program
-[2025-05-03 14:10:50] INFO: Reading products from file
-[2025-05-03 14:10:50] INFO: Products read successfully
-[2025-05-03 14:10:50] INFO: Displaying products
-[2025-05-03 14:10:50] INFO: Products displayed successfully
-[2025-05-03 14:10:50] INFO: Reading quotes from file
-[2025-05-03 14:10:50] INFO: Quotes read successfully
-[2025-05-03 14:10:50] INFO: Displaying quotes
-[2025-05-03 14:10:50] INFO: Grouping products by quotes
-[2025-05-03 14:11:31] INFO: Starting the program
-[2025-05-03 14:11:31] INFO: Reading products from file
-[2025-05-03 14:11:31] INFO: Products read successfully
-[2025-05-03 14:11:31] INFO: Displaying products
-[2025-05-03 14:11:31] INFO: Products displayed successfully
-[2025-05-03 14:11:31] INFO: Reading quotes from file
-[2025-05-03 14:11:31] INFO: Quotes read successfully
-[2025-05-03 14:11:31] INFO: Displaying quotes
-[2025-05-03 14:11:31] INFO: Grouping products by quotes
-[2025-05-03 14:34:40] INFO: Starting the program
-[2025-05-03 14:34:40] INFO: Reading products from file
-[2025-05-03 14:34:40] INFO: Products read successfully
-[2025-05-03 14:34:40] INFO: Displaying products
-[2025-05-03 14:34:40] INFO: Products displayed successfully
-[2025-05-03 14:34:40] INFO: Reading quotes from file
-[2025-05-03 14:34:40] INFO: Quotes read successfully
-[2025-05-03 14:34:40] INFO: Displaying quotes
-[2025-05-03 14:34:40] INFO: Grouping products by quotes
-[2025-05-03 14:37:52] INFO: Starting the program
-[2025-05-03 14:37:52] INFO: Reading products from file
-[2025-05-03 14:37:52] INFO: Products read successfully
-[2025-05-03 14:37:52] INFO: Displaying products
-[2025-05-03 14:37:52] INFO: Products displayed successfully
-[2025-05-03 14:37:52] INFO: Reading quotes from file
-[2025-05-03 14:37:52] INFO: Quotes read successfully
-[2025-05-03 14:37:52] INFO: Displaying quotes
-[2025-05-03 14:37:52] INFO: Grouping products by quotes
-[2025-05-03 14:38:24] INFO: Starting the program
-[2025-05-03 14:38:24] INFO: Reading products from file
-[2025-05-03 14:38:24] INFO: Products read successfully
-[2025-05-03 14:38:24] INFO: Displaying products
-[2025-05-03 14:38:24] INFO: Products displayed successfully
-[2025-05-03 14:38:24] INFO: Reading quotes from file
-[2025-05-03 14:38:24] INFO: Quotes read successfully
-[2025-05-03 14:38:24] INFO: Displaying quotes
-[2025-05-03 14:38:24] INFO: Grouping products by quotes
-[2025-05-03 14:39:01] INFO: Starting the program
-[2025-05-03 14:39:01] INFO: Reading products from file
-[2025-05-03 14:39:01] INFO: Products read successfully
-[2025-05-03 14:39:01] INFO: Displaying products
-[2025-05-03 14:39:01] INFO: Products displayed successfully
-[2025-05-03 14:39:01] INFO: Reading quotes from file
-[2025-05-03 14:39:01] INFO: Quotes read successfully
-[2025-05-03 14:39:01] INFO: Displaying quotes
-[2025-05-03 14:39:01] INFO: Grouping products by quotes
-[2025-05-03 14:40:04] INFO: Starting the program
-[2025-05-03 14:40:04] INFO: Reading products from file
-[2025-05-03 14:40:04] INFO: Products read successfully
-[2025-05-03 14:40:04] INFO: Displaying products
-[2025-05-03 14:40:04] INFO: Products displayed successfully
-[2025-05-03 14:40:04] INFO: Reading quotes from file
-[2025-05-03 14:40:04] INFO: Quotes read successfully
-[2025-05-03 14:40:04] INFO: Displaying quotes
-[2025-05-03 14:40:04] INFO: Grouping products by quotes
-[2025-05-03 14:49:46] INFO: Starting the program
-[2025-05-03 14:49:46] INFO: Reading products from file
-[2025-05-03 14:49:46] INFO: Products read successfully
-[2025-05-03 14:49:46] INFO: Displaying products
-[2025-05-03 14:49:46] INFO: Products displayed successfully
-[2025-05-03 14:49:46] INFO: Reading quotes from file
-[2025-05-03 14:49:46] INFO: Quotes read successfully
-[2025-05-03 14:49:46] INFO: Displaying quotes
-[2025-05-03 14:49:46] INFO: Grouping products by quotes
-[2025-05-03 14:49:48] INFO: Freeing memory
-[2025-05-03 14:49:48] INFO: Memory freed successfully
-[2025-05-03 14:49:48] INFO: Ending the program
-[2025-05-03 15:04:22] INFO: Starting the program
-[2025-05-03 15:04:22] INFO: Reading products from file
-[2025-05-03 15:04:22] INFO: Products read successfully
-[2025-05-03 15:04:22] INFO: Displaying products
-[2025-05-03 15:04:22] INFO: Products displayed successfully
-[2025-05-03 15:04:22] INFO: Reading quotes from file
-[2025-05-03 15:04:22] INFO: Quotes read successfully
-[2025-05-03 15:04:22] INFO: Displaying quotes
-[2025-05-03 15:04:22] INFO: Grouping products by quotes
-[2025-05-03 15:06:28] INFO: Starting the program
-[2025-05-03 15:06:28] INFO: Reading products from file
-[2025-05-03 15:06:28] INFO: Products read successfully
-[2025-05-03 15:06:28] INFO: Displaying products
-[2025-05-03 15:06:28] INFO: Products displayed successfully
-[2025-05-03 15:06:28] INFO: Reading quotes from file
-[2025-05-03 15:06:28] INFO: Quotes read successfully
-[2025-05-03 15:06:28] INFO: Displaying quotes
-[2025-05-03 15:06:28] INFO: Grouping products by quotes
-[2025-05-03 15:07:39] INFO: Freeing memory
-[2025-05-03 15:07:39] INFO: Memory freed successfully
-[2025-05-03 15:07:39] INFO: Ending the program
+[2025-05-03 19:45:44] INFO: Starting the program
+[2025-05-03 19:45:44] INFO: Reading products from file
+[2025-05-03 19:45:44] INFO: Products read successfully
+[2025-05-03 19:45:44] INFO: Displaying products
+[2025-05-03 19:45:44] INFO: Products displayed successfully
+[2025-05-03 19:45:44] INFO: Reading quotes from file
+[2025-05-03 19:45:44] INFO: Quotes read successfully
+[2025-05-03 19:45:44] INFO: Displaying quotes
+[2025-05-03 19:45:44] INFO: Grouping products by quotes
+[2025-05-03 19:48:16] INFO: Starting the program
+[2025-05-03 19:48:16] INFO: Reading products from file
+[2025-05-03 19:48:16] INFO: Products read successfully
+[2025-05-03 19:48:16] INFO: Displaying products
+[2025-05-03 19:48:16] INFO: Products displayed successfully
+[2025-05-03 19:48:16] INFO: Reading quotes from file
+[2025-05-03 19:48:16] INFO: Quotes read successfully
+[2025-05-03 19:48:16] INFO: Displaying quotes
+[2025-05-03 19:48:16] INFO: Grouping products by quotes
+[2025-05-03 19:48:26] INFO: Freeing memory
+[2025-05-03 19:48:26] INFO: Memory freed successfully
+[2025-05-03 19:48:26] INFO: Ending the program
+[2025-05-03 19:50:39] INFO: Starting the program
+[2025-05-03 19:50:39] INFO: Reading products from file
+[2025-05-03 19:50:39] INFO: Products read successfully
+[2025-05-03 19:50:39] INFO: Displaying products
+[2025-05-03 19:50:39] INFO: Products displayed successfully
+[2025-05-03 19:50:39] INFO: Reading quotes from file
+[2025-05-03 19:50:39] INFO: Quotes read successfully
+[2025-05-03 19:50:39] INFO: Displaying quotes
+[2025-05-03 19:50:39] INFO: Grouping products by quotes
+[2025-05-03 19:50:44] INFO: Freeing memory
+[2025-05-03 19:50:44] INFO: Memory freed successfully
+[2025-05-03 19:50:44] INFO: Ending the program
+[2025-05-03 19:51:36] INFO: Starting the program
+[2025-05-03 19:51:36] INFO: Reading products from file
+[2025-05-03 19:51:36] INFO: Products read successfully
+[2025-05-03 19:51:36] INFO: Displaying products
+[2025-05-03 19:51:36] INFO: Products displayed successfully
+[2025-05-03 19:51:36] INFO: Reading quotes from file
+[2025-05-03 19:51:36] INFO: Quotes read successfully
+[2025-05-03 19:51:36] INFO: Displaying quotes
+[2025-05-03 19:51:36] INFO: Grouping products by quotes
+[2025-05-03 19:51:45] INFO: Starting the program
+[2025-05-03 19:51:45] INFO: Reading products from file
+[2025-05-03 19:51:45] INFO: Products read successfully
+[2025-05-03 19:51:45] INFO: Displaying products
+[2025-05-03 19:51:45] INFO: Products displayed successfully
+[2025-05-03 19:51:45] INFO: Reading quotes from file
+[2025-05-03 19:51:45] INFO: Quotes read successfully
+[2025-05-03 19:51:45] INFO: Displaying quotes
+[2025-05-03 19:51:45] INFO: Grouping products by quotes
+[2025-05-03 19:51:46] INFO: Freeing memory
+[2025-05-03 19:51:46] INFO: Memory freed successfully
+[2025-05-03 19:51:46] INFO: Ending the program
+[2025-05-03 19:51:49] INFO: Starting the program
+[2025-05-03 19:51:49] INFO: Reading products from file
+[2025-05-03 19:51:49] INFO: Products read successfully
+[2025-05-03 19:51:49] INFO: Displaying products
+[2025-05-03 19:51:49] INFO: Products displayed successfully
+[2025-05-03 19:51:49] INFO: Reading quotes from file
+[2025-05-03 19:51:49] INFO: Quotes read successfully
+[2025-05-03 19:51:49] INFO: Displaying quotes
+[2025-05-03 19:51:49] INFO: Grouping products by quotes
+[2025-05-03 19:51:52] INFO: Freeing memory
+[2025-05-03 19:51:52] INFO: Memory freed successfully
+[2025-05-03 19:51:52] INFO: Ending the program
+[2025-05-03 19:52:17] INFO: Starting the program
+[2025-05-03 19:52:17] INFO: Reading products from file
+[2025-05-03 19:52:17] INFO: Products read successfully
+[2025-05-03 19:52:17] INFO: Displaying products
+[2025-05-03 19:52:17] INFO: Products displayed successfully
+[2025-05-03 19:52:17] INFO: Reading quotes from file
+[2025-05-03 19:52:17] INFO: Quotes read successfully
+[2025-05-03 19:52:17] INFO: Displaying quotes
+[2025-05-03 19:52:17] INFO: Grouping products by quotes
+[2025-05-03 19:52:20] INFO: Freeing memory
+[2025-05-03 19:52:20] INFO: Memory freed successfully
+[2025-05-03 19:52:20] INFO: Ending the program
+[2025-05-03 19:55:34] INFO: Starting the program
+[2025-05-03 19:55:34] INFO: Reading products from file
+[2025-05-03 19:55:34] INFO: Products read successfully
+[2025-05-03 19:55:34] INFO: Displaying products
+[2025-05-03 19:55:34] INFO: Products displayed successfully
+[2025-05-03 19:55:34] INFO: Reading quotes from file
+[2025-05-03 19:55:34] INFO: Quotes read successfully
+[2025-05-03 19:55:34] INFO: Displaying quotes
+[2025-05-03 19:55:34] INFO: Grouping products by quotes
+[2025-05-03 19:55:37] INFO: Freeing memory
+[2025-05-03 19:55:37] INFO: Memory freed successfully
+[2025-05-03 19:55:37] INFO: Ending the program
+[2025-05-03 19:57:01] INFO: Starting the program
+[2025-05-03 19:57:01] INFO: Reading products from file
+[2025-05-03 19:57:01] INFO: Products read successfully
+[2025-05-03 19:57:01] INFO: Displaying products
+[2025-05-03 19:57:01] INFO: Products displayed successfully
+[2025-05-03 19:57:01] INFO: Reading quotes from file
+[2025-05-03 19:57:01] INFO: Quotes read successfully
+[2025-05-03 19:57:01] INFO: Displaying quotes
+[2025-05-03 19:57:01] INFO: Grouping products by quotes
+[2025-05-03 19:57:06] INFO: Freeing memory
+[2025-05-03 19:57:06] INFO: Memory freed successfully
+[2025-05-03 19:57:06] INFO: Ending the program

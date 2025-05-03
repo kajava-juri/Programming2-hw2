@@ -63,10 +63,10 @@ void ReadProducts(GenericWrapper *pw, char *filename)
     fscanf(fp, "%*[^\n]\n"); // Reads and discards everything until the first newline
 
     // Limit the maximum characters read by having the MACRO value after '%' to avoid buffer overflow
-    while (count < MAX_PRODUCTS && fscanf(fp, " %" STR(PRODUCT_CODE_LEN) "[^,] ,"                                            // product code
-                                                                         " %" STR(BUF_LEN) "[^,] ,"                      // product name
-                                                                                           "%d,%f,"                      // RAM size, screen size
-                                                                                           " %" STR(BUF_LEN) "[^\n] \n", // operating system
+    while (count < MAX_PRODUCTS && fscanf(fp, "%" STR(PRODUCT_CODE_LEN) "[^,]," // product code
+                                            "%" STR(BUF_LEN) "[^,]," // product name
+                                            "%d,%f,"  // RAM size, screen size
+                                            "%" STR(BUF_LEN) "s\n", // operating system
                                           bufCode, bufName, &bufRam, &bufScreen, bufOS) == 5)
     {
         printf("Product %zu: %s, %s, %d MB, %.2f inches, %s\n", count + 1, bufCode, bufName, bufRam, bufScreen, bufOS);
@@ -154,6 +154,7 @@ Product *GetProductByCode(GenericWrapper *pw, const char *productCode)
     return NULL;
 }
 
+/*Credit to this article https://codeforwin.org/c-programming/c-program-replace-specific-line-a-text-file*/
 int ApplyProductEdits(Product *product, const char *productCode, const char *filename)
 {
     if (product == NULL || productCode == NULL || filename == NULL)

@@ -5,6 +5,7 @@
 
 static FILE *logFile = NULL;
 static int loggingEnabled = 0;
+static LogLevel currentLogLevel = LOG_INFO; // Default log level
 static const char *logLevelStrings[] = {
     [LOG_DEBUG] = "DEBUG",
     [LOG_INFO] = "INFO",
@@ -15,9 +16,9 @@ static const char *logLevelStrings[] = {
 // private function to be used inside logger.c
 void LogMessage(LogLevel level, const char *message);
 
-void LogInitialize()
+void LogInitialize(LogLevel level, char*filename)
 {
-    FILE *f = fopen(LOG_FILE, "a");
+    FILE *f = fopen(filename, "a");
 
     // This is basically to log logging error once
     // and not every time something is logged
@@ -28,13 +29,32 @@ void LogInitialize()
     }
     else {
         fclose(f);
+        currentLogLevel = level;
         loggingEnabled = 1;
     }
+}
+
+// Set the minimum log level that will be recorded
+void LogSetLevel(LogLevel level)
+{
+    if (level >= LOG_DEBUG && level <= LOG_ERROR) {
+        currentLogLevel = level;
+    }
+}
+
+LogLevel LogGetLevel()
+{
+    return currentLogLevel;
 }
 
 void LogMessage(LogLevel level, const char *message)
 {
     if (!loggingEnabled) {
+        return;
+    }
+    
+    // Skip logging if the message level is below current log level
+    if (level < currentLogLevel) {
         return;
     }
 

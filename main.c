@@ -7,12 +7,14 @@
 #include "utils.h"
 #include "logger.h"
 #include "menu.h"
+#include "main.h"
 
 int main(void)
 {
-    LogInitialize();
+    LogInitialize(LOG_INFO, "logs.txt");
     LogInfo("Starting the program");
 
+    // Initialize the GenericWrapper for products
     GenericWrapper pw;
     Product *products = NULL;
     pw.data = products;
@@ -20,20 +22,23 @@ int main(void)
     // void function pointer that takes a void pointer as parameter and returns a pointer to void data...
     pw.getElementAt = (void * (*)(void *, size_t))GetProductAt;
 
-    ReadProducts(&pw, "data/products.csv");
-    LogInfo("Products read successfully");
-    LogInfo("Displaying products");
-
-    //DisplayProducts(&pw);
-    LogInfo("Products displayed successfully");
-
+    // Initialize the GenericWrapper for quotes
     GenericWrapper qw;
     Quote *quotes = NULL;
     qw.data = quotes;
     qw.freeData = (void (*)(void *))FreeQuote;
 
     qw.getElementAt = (void * (*)(void *, size_t))GetQuoteAt;
-    ReadQuotes(&qw, "data/quotes.csv");
+
+    // Start reading products and quotes from the CSV files
+    ReadProducts(&pw, PRODUCT_FILE);
+    LogInfo("Products read successfully");
+    LogInfo("Displaying products");
+
+    //DisplayProducts(&pw);
+    LogInfo("Products displayed successfully");
+
+    ReadQuotes(&qw, QUOTE_FILE);
     LogInfo("Quotes read successfully");
 
     LogInfo("Displaying quotes");

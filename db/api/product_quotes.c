@@ -208,7 +208,7 @@ int SearchProductsByStore(GenericWrapper *products, GenericWrapper *quotes,
     results->limit = 10; // Start with space for 10 product pointers
     results->data = malloc(results->limit * sizeof(Product*));
     results->getElementAt = GetProductAt;
-    results->freeData = NULL; // We're storing pointers, don't free the original products
+    results->freeData = FreeProduct; // We're storing pointers, don't free the original products
     
     if (results->data == NULL) {
         LogError("Failed to allocate memory for results data");

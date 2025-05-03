@@ -6,10 +6,10 @@
 # $* : target without extension
 
 SRC = main.c logger.c utils.c menu.c db/data_api.c db/api/products.c db/api/quotes.c db/api/product_quotes.c
+# replaces the .c with .o and stores in OBJ variable
 OBJ = $(SRC:.c=.o)
 CC = gcc
 CFLAGS = -Wall -Wextra -pedantic -fanalyzer -g -fsanitize=address
-
 TARGET = pwatch
 
 # by default, try to make the target

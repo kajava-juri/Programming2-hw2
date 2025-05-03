@@ -4,10 +4,10 @@
 #define LOG_FILE "log.txt"
 
 typedef enum {
-    LOG_INFO,
-    LOG_ERROR,
+    LOG_DEBUG,   // Most verbose level
+    LOG_INFO,    // Default level
     LOG_WARNING,
-    LOG_DEBUG
+    LOG_ERROR    // Least verbose level
 } LogLevel;
 
 // private function to be used inside logger.c
@@ -16,7 +16,13 @@ typedef enum {
 // void LogMessage(LogLevel level, const char *message);
 
 
-void LogInitialize();
+void LogMessage(LogLevel level, const char *message);
+
+// Set the minimum log level that will be recorded
+void LogSetLevel(LogLevel level);
+
+// Get the current log level
+LogLevel LogGetLevel();
 
 void LogDebug(const char *message);
 void LogInfo(const char *message);

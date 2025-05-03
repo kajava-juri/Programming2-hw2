@@ -89,10 +89,10 @@ void ReadQuotes(GenericWrapper *pw, char *filename)
 
     // Limit the maximum characters read by having the MACRO value after '%' to avoid buffer overflow
     while (count < MAX_QUOTES && fscanf(fp, " %" STR(QUOTE_ID_LEN) "[^,] ,"                                                                                          // quote ID
-                                                                   " %" STR(PRODUCT_CODE_LEN) "[^,] ,"                                                               // product code
-                                                                                              " %" STR(MAX_RETAILER_LEN) "[^,] ,"                                    // retailer name
-                                                                                                                         "%f,"                                       // price
-                                                                                                                         " %" STR(QUOTE_AVAILABILITY_LEN) "[^\n]\n", // availability status
+                                            " %" STR(PRODUCT_CODE_LEN) "[^,] ,"                                                               // product code
+                                            " %" STR(MAX_RETAILER_LEN) "[^,] ,"// retailer name
+                                            "%f,"                                       // price
+                                            " %" STR(QUOTE_AVAILABILITY_LEN) "[^\n]\n", // availability status
                                         bufCode, bufProductCode, bufRetailer, &bufPrice, bufAvailability) == 5)
     {
         printf("Quote %zu: %s, %s, %s, %.2f, %s\n", count + 1, bufCode, bufProductCode, bufRetailer, bufPrice, bufAvailability);
@@ -200,6 +200,7 @@ Quote *GetQuoteByCode(GenericWrapper *pw, const char *quoteCode)
     return NULL;
 }
 
+/*Credit to this article https://codeforwin.org/c-programming/c-program-replace-specific-line-a-text-file*/
 int ApplyQuoteEdits(Quote *quote, const char *quoteCode, const char *filename)
 {
     if (quote == NULL || quoteCode == NULL || filename == NULL)
